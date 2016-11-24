@@ -3,11 +3,13 @@ package com.zhephyr.somedaytoday;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_profile_action);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +46,15 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case android.R.id.home:
+                Toast testToast1 = Toast.makeText(getApplicationContext(), "This is Nav.", Toast.LENGTH_LONG);
+                testToast1.show();
+                break;
+
+            case R.id.action_filter:
+                Toast testToast2 = Toast.makeText(getApplicationContext(), "This is Filter.", Toast.LENGTH_LONG);
+                testToast2.show();
         }
 
         return super.onOptionsItemSelected(item);
