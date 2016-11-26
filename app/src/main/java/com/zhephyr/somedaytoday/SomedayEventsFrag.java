@@ -35,8 +35,6 @@ public class SomedayEventsFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflator, ViewGroup container, Bundle savedInstanceState) {
         View view = inflator.inflate(R.layout.activity_someday_events, container, false);
-        TextView somedayLabel = (TextView) view.findViewById(R.id.someday_lbl);
-        somedayLabel.setText(_title);
         return view;
     }
 }

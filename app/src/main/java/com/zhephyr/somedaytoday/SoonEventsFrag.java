@@ -35,8 +35,6 @@ public class SoonEventsFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflator, ViewGroup container, Bundle savedInstanceState) {
         View view = inflator.inflate(R.layout.activity_soon_events, container, false);
-        TextView soonLabel = (TextView) view.findViewById(R.id.soon_lbl);
-        soonLabel.setText(_title);
         return view;
     }
 }

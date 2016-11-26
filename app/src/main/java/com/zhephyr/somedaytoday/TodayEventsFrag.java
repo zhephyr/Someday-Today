@@ -35,8 +35,6 @@ public class TodayEventsFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflator, ViewGroup container, Bundle savedInstanceState) {
         View view = inflator.inflate(R.layout.activity_today_events, container, false);
-        TextView todayLabel = (TextView) view.findViewById(R.id.today_lbl);
-        todayLabel.setText(_title);
         return view;
     }
 }
