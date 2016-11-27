@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "835071619681",
+    "firebase_url": "https://someday-today.firebaseio.com",
+    "project_id": "someday-today",
+    "storage_bucket": "someday-today.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835071619681:android:4043c1b64af077cb",
+        "android_client_info": {
+          "package_name": "com.zhephyr.somedaytoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835071619681-ogafkoh0crft7quq466bglmagn3k2e4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zhephyr.somedaytoday",
+            "certificate_hash": "B63665044AA0E531EFBD4B5661B8201E14B56FDE"
+          }
+        },
+        {
+          "client_id": "835071619681-jkssdrsbnahae9vdn84kponrhasla9tt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-x0a7spmj-G3v4XxJMLR0UQeImAx8PUw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835071619681-jkssdrsbnahae9vdn84kponrhasla9tt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

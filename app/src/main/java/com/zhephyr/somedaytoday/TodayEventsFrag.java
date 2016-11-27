@@ -7,10 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by wangz on 11/23/2016.
- */
-
 public class TodayEventsFrag extends Fragment {
 
     private String _title;
