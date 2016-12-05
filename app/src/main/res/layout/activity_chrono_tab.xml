@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    tools:context=".ChronoSwipeViewActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ChronoSwipeViewActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorVariant">
+        android:background="@color/colorVariant"
+        android:weightSum="1">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/chrono_tabs"
@@ -20,10 +21,21 @@
             android:layout_marginEnd="15dp"
             app:tabMode="fixed"
             android:background="@color/colorVariant"/>
-    </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        android:layout_margin="@dimen/fab_margin"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/chrono_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabs" />
+</RelativeLayout>
