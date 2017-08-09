@@ -1,20 +1,14 @@
 package com.zhephyr.somedaytoday;
 
-import android.*;
 import android.Manifest;
-import android.app.DialogFragment;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -24,22 +18,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.OptionalPendingResult;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 
 public class MainActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
@@ -49,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements
     private FirebaseAuth _firebaseAuth;
     private FirebaseUser _firebaseUser;
     private FirebaseAnalytics _firebaseAnalytics;
-    private FirebaseRemoteConfig _firebaseRemoteConfig;
     private GoogleApiClient _googleApiClient;
     private static final String TAG = "SignInActivity";
 
@@ -114,7 +98,6 @@ public class MainActivity extends AppCompatActivity implements
             errToast.show();
 
             MainActivity.this.finish();
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
             return;
         } else {
             String username = _firebaseUser.getDisplayName();
